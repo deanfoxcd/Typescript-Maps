@@ -1,15 +1,11 @@
 /// <reference types="@types/google.maps" />
 
-// import { Company } from './Company';
-// import { User } from './User';
+import { Map } from './Map';
+import { Company } from './Company';
+import { User } from './User';
 
-// const user = new User();
-// console.log(user);
+const map = new Map('map');
+const user = new User();
+const company = new Company();
 
-// const company = new Company();
-// console.log(company);
-
-new google.maps.Map(document.getElementById('map') as HTMLElement, {
-  zoom: 1,
-  center: { lat: 0, lng: 0 },
-});
+map.addMarker(user);
